@@ -30,7 +30,6 @@ body {
   margin: 0;
   height: 100%;
   color: var(--gray-light);
-  font-size: 14pt;
   background-color: var(--background);
 }
 
@@ -106,8 +105,24 @@ strong {
   color: var(--cyan);
 }
 
+strong:before {
+  content: "**";
+}
+
+strong:after {
+  content: "**";
+}
+
 em {
   color: var(--green);
+}
+
+em:before {
+  content: "*";
+}
+
+em:after {
+  content: "*";
 }
 
 ul {
@@ -147,12 +162,20 @@ code {
 }
 
 nav {
-  padding: 5px;
+  gap: 5px;
+  display: flex;
+  padding-bottom: 0px;
+  cursor: default;
+  background-color: var(--background-dark);
 }
 
 nav a {
   padding: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
   color: var(--gray-dark);
+  cursor: pointer;
+  background-color: var(--background);
 }
 
 nav a:focus {
@@ -162,6 +185,28 @@ nav a:focus {
 nav a:hover {
   color: var(--blue);
   text-decoration: none;
+}
+
+table, td, th {
+  padding: 5px;
+  border-collapse: collapse;
+  border: 2px solid var(--black-light);
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+hr {
+  color: var(--black-light);
+  border: none;
+  height: 2px;
+  background-color: var(--black-light);
+}
+
+.glow {
+  text-shadow: 0px 0px 3px;
 }
 
 .content {
@@ -190,4 +235,26 @@ nav a:hover {
   position: sticky;
   top: 0;
   background-color: var(--background);
+}
+
+.waving-smiley {
+  display: flex;
+}
+
+.waving-smiley div {
+  animation: waving 1s infinite;
+  transform-origin: bottom left;
+}
+
+
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
