@@ -1,6 +1,11 @@
 fillFlags();
 fillLineNumbers();
 
+// update line numbers on window resize
+onresize = () => {
+  fillLineNumbers(); 
+};
+
 function fillFlags() {
   let html = "";
   for (let i = 0; i < 6; i++) {
