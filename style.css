@@ -1,13 +1,15 @@
 @font-face {
     font-family: 'JetBrainsMono';
-    src: url('assets/fonts/jetbrainsmono.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: url('assets/fonts/jetbrainsmono.woff') format('woff'), 
          url('assets/fonts/jetbrainsmono.woff2') format('woff2'),
-         url('assets/fonts/jetbrainsmono.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+         url('assets/fonts/jetbrainsmono.ttf') format('truetype');
 }  
 
 @font-face {
   font-family: 'BigBlueTerm';
-  src: url('assets/fonts/bigblueterm.ttf') format('truetype');
+  src: url('assets/fonts/bigblueterm.woff') format('woff'),
+       url('assets/fonts/bigblueterm.woff2') format('woff2'),
+       url('assets/fonts/bigblueterm.ttf') format('truetype');
 }
 
 :root {
